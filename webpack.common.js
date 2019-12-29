@@ -2,6 +2,7 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const AwesomeTypescriptLoader = require("awesome-typescript-loader");
 const {CleanWebpackPlugin} = require("clean-webpack-plugin");
+const InlineSVG = require("svg-inline-loader");
 
 module.exports = {
     entry: "./src/App.tsx",
@@ -29,6 +30,10 @@ module.exports = {
                 use: ["source-map-loader"]
             },
             {
+                test: /\.svg$/,
+                use: ["svg-inline-loader"]
+            },
+            {
                 test: /\.(svg|png|gif)$/,
                 use: {
                     loader: "file-loader",
@@ -48,6 +53,6 @@ module.exports = {
     ],
     devtool: "source-map",
     resolve: {
-        extensions: [".js", ".tsx", ".css", ".svg"]
+        extensions: [".js", ".tsx", ".css"]
     }
 }

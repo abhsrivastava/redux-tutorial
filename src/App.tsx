@@ -1,6 +1,7 @@
 import * as React from 'react';
 import {Provider} from 'react-redux';
-import  * as logo from './images/logo';
+import InlineSVG from 'svg-inline-react';
+import  * as logo from './images/logo.svg';
 import './css/App.css';
 import PostForm from './components/PostForm';
 import Posts from './components/Posts';
@@ -11,7 +12,7 @@ export default class App extends React.Component<{}, {}>{
             <Provider store={store}>
                 <div className="App">
                     <header className="App-Header">
-                        <img src={logo} className="App-logo" alt="logo" />
+                        <InlineSVG src={logo}/>
                         <h1 className="App-tite">Welcome to React</h1>
                     </header>
                     <PostForm/>
