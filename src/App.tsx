@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {Provider} from 'react-redux';
-import logo from './images/logo';
+import  * as logo from './images/logo';
 import './css/App.css';
 import PostForm from './components/PostForm';
 import Posts from './components/Posts';
